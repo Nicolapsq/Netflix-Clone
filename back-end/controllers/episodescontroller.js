@@ -1,5 +1,5 @@
 const db = require("../data/netflix-clone_db");
-
+////////
 function index(req, res) {
   const movieId = parseInt(req.params.movieId);
   const query = `SELECT * FROM episodes WHERE movie_id = ?`;
