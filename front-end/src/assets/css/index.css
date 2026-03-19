@@ -1,0 +1,1381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.debug,
+.debug *{
+    min-height: 50px;
+    padding: 5px;
+    background-color: rgba(255, 0, 0, 0.219);
+    border: 1px dashed red;
+}
+
+/* componenti */
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #e50914;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    z-index: 999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: forwards 0.3s ease;
+}
+
+/* modal */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal .contenitore {
+    background: #222;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.modal .contenitore p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.modal .contenitore div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.modal .contenitore .btn-conferma {
+    padding: 12px 30px;
+    background: #e50914;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.modal .contenitore .btn-annulla {
+    padding: 12px 30px;
+    background: transparent;
+    color: #aaa;
+    border-radius: 5px;
+    border: 2px solid #aaa;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Stili globali per il layout */
+
+.caricamento {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/* navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-Items: center;
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    z-Index: 100;
+}
+
+.navbar-link,
+.navbar .watchlist-link {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contenitore-login {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.contenitore-login .home-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contenitore-login button,
+.navbar .link-watchlist,
+.navbar .link-profili {
+    background: #e50914;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-link-login {
+    background: #e50914;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-link {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar span {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.navbar button {
+    background: #e50914;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border-color: #e50914;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/* home pubblica */
+
+/* sezione home */
+
+.home-pubblica {
+    background: #000;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.home-pubblica .sezione-home {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url(https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IT-it-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.home-pubblica .sezione-home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home-pubblica .sezione-home .p-1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.home-pubblica .sezione-home .p-2 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.home-pubblica .sezione-home .link {
+    background: #e50914;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* sezione features */
+
+.home-pubblica .sezione-features {
+    padding: 70px 20px;
+    border-top: 8px solid #222;
+}
+
+.home-pubblica .sezione-features .div-0 {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-pubblica .sezione-features .div-0 .div-1 {
+    flex: 1;
+}
+
+.home-pubblica .sezione-features .div-0 .div-1 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-pubblica .sezione-features .div-0 .div-1 p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+.home-pubblica .sezione-features .div-0 .div-2 {
+    flex: 1;
+    text-align: center;
+    font-size: 8rem;
+}
+
+/* sezione download */
+
+.home-pubblica .sezione-download {
+    padding: 70px 20px;
+    border-top: 8px solid #222;
+}
+
+.home-pubblica .sezione-download .div-0 {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.home-pubblica .sezione-download .div-0 .div-1 {
+    flex: 1;
+    text-align: center;
+    font-size: 8rem;
+}
+
+.home-pubblica .sezione-download .div-0 .div-2 {
+    flex: 1;
+}
+
+.home-pubblica .sezione-download .div-0 .div-2 h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.home-pubblica .sezione-download .div-0 .div-2 p {
+    font-size: 1.2rem;
+    color: #ccc;
+}
+
+/* sia login che register */
+
+.login .overlay,
+.register .overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.login .form,
+.register .form {
+    position: relative;
+    background: rgba(0,0,0,0.85);
+    padding: 60px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 800px;
+    max-width: 1000px;
+    color: #fff;
+}
+
+.login .form .error,
+.register .form .error {
+    background: #e50914;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.login .form div input,
+.register .form div input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-Size: 1rem;
+}
+
+.login .form button,
+.register .form button {
+    width: 100%;
+    padding: 15px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login .form p,
+.register .form p {
+    color: #aaa;
+    margin-top: 20px;
+}
+
+/* login */
+
+.login {
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IT-it-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login .form h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+
+.login .form p .link,
+.register .form p .link {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.register .form p .contenitore,
+.login .form p .contenitore {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* register */
+
+.register{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12fea5197bd3/IT-it-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.register .link-torna-alla-home {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* home privata */
+
+.home-privata {
+    background: #141414;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* sezione in primo piano */
+
+.home-privata .featured {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+}
+
+.home-privata .featured .contenitore {
+    max-width: 500px;
+}
+
+.home-privata .featured h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.home-privata .featured p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.home-privata .featured .play-button {
+    padding: 12px 30px;
+    background: #fff;
+    color: #000;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.home-privata .featured .info-button {
+    padding: 12px 30px;
+    background: rgba(109,109,110,0.7);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+/* barra di ricerca */
+
+.home-privata .search {
+    padding: 30px 60px;
+}
+
+.home-privata .search input {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: none;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+}
+
+/* risultati ricerca */
+
+.home-privata .risultati-ricerca {
+    padding: 30px 60px;
+}
+
+.home-privata .risultati-ricerca h2 {
+    margin-bottom: 20px;
+}
+
+.home-privata .risultati-ricerca .contenitore {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.home-privata .risultati-ricerca .contenitore div {
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.home-privata .risultati-ricerca .contenitore img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.home-privata .risultati-ricerca .contenitore p {
+    padding: 8px;
+    background: #222;
+    font-size: 0.9rem;
+}
+
+/* sia sezione film che serie tv */
+
+.contenitore-film div,
+.contenitore-serie div {
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.contenitore-film img,
+.contenitore-serie img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.contenitore-film p,
+.contenitore-serie p {
+    padding: 8px;
+    background: #222;
+    font-size: 0.9rem;
+}
+
+/* sezione film */
+
+.home-privata .sezione-film {
+    padding: 40px 60px;
+}
+
+.home-privata .sezione-film h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contenitore-film {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* sezione serie tv */
+
+.sezione-serie {
+    padding: 40px 60px;
+}
+
+.sezione-serie h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contenitore-serie {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* dettaglio film */
+
+.film-non-trovato,
+.episodio-non-trovato {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.film-non-trovato .link,
+.episodio-non-trovato .link {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 50px;
+}
+
+.dettaglio-film,
+.dettaglio-episodio {
+    background: #141414;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.dettaglio-film .banner,
+.dettaglio-episodio .banner {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 60px;
+}
+
+.dettaglio-film .banner h1,
+.dettaglio-episodio .banner h1 {
+    font-size: 3rem;
+}
+
+.dettaglio-film .contenitore {
+    padding: 40px 60px;
+}
+
+.dettaglio-film .contenitore .dettaglio {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.dettaglio-film .contenitore .dettaglio img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.dettaglio-film .contenitore .dettaglio .info {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.dettaglio-film .contenitore .dettaglio p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.dettaglio-film .contenitore .dettaglio .bottoni {
+    display: flex;
+    gap: 15px;
+}
+
+.dettaglio-film .contenitore .dettaglio .bottoni button {
+    padding: 12px 30px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dettaglio-serie h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.dettaglio-serie .contenitore-episodi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dettaglio-serie .contenitore-episodi .episodi {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.dettaglio-serie .episodi .span-1 {
+    color: #aaa;
+    min-width: 30px;
+}
+
+.dettaglio-serie .episodi .span-2 {
+    color: #aaa;
+    margin-left: auto;
+}
+
+.dettaglio-serie .episodi .p-1 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dettaglio-serie .episodi .p-2 {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* dettaglio episodio */
+
+.dettaglio-episodio .banner p {
+    color: #aaa;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.dettaglio-episodio .contenitore-info {
+    padding: 40px 60px;
+}
+
+.dettaglio-episodio .contenitore-info .info {
+    display: flex;
+    gap: 20px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.dettaglio-episodio .contenitore-info .bottoni {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.dettaglio-episodio .contenitore-info .bottoni button {
+    padding: 12px 30px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dettaglio-episodio .video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.dettaglio-episodio .video-non-disponibile {
+    width: 100%;
+    height: 400px;
+    background: #222;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+/* watchlist */
+
+.contenitore-watchlist {
+    background: #141414;
+    min-height: 100vh;
+    color: #fff;
+    padding: 100px 60px 40px;
+}
+
+.contenitore-watchlist h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.contenitore-watchlist .watchlist-vuota {
+    text-align: center;
+    color: #aaa;
+    margin-top: 100px;
+}
+
+.watchlist-vuota p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.watchlist-vuota button {
+    padding: 12px 30px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.watchlist-piena {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.watchlist-piena .contenitore {
+    border-radius: 8px;
+    overflow: hidden;
+    background: #222;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.watchlist-piena .contenitore img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.watchlist-piena .contenitore p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.watchlist-piena button {
+    width: 100%;
+    padding: 8px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* selezione profili */
+
+.selezione-profili {
+    background: #141414;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.selezione-profili h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.selezione-profili .contenitore {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.selezione-profili .contenitore .profili {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.selezione-profili .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    overflow: hidden;
+    transition: border 0.2s;
+}
+
+.selezione-profili .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selezione-profili .nome-profilo {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.selezione-profili .kids {
+    background: #e50914;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.selezione-profili .aggiungi-profilo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.selezione-profili .nuovo-profilo {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    background: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    transition: border 0.2s;
+}
+
+.selezione-profili span {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+.selezione-profili button {
+    padding: 12px 30px;
+    background: transparent;
+    color: #aaa;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* generi */
+
+.generi-profili {
+    background: #141414;
+    min-height: 100vh;
+    padding: 100px 60px 40px;
+    color: #fff;
+}
+
+.generi-profili h1 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #e50914;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.generi-profili .contenitore {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.generi-profili .contenitore .generi {
+    background: #e50914;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.generi-profili .link {
+    text-align: center;
+    margin: 40px;
+}
+
+.generi-profili .link .torna-alla-home {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background: #e50914;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* dettaglio generi */
+
+.dettaglio-generi {
+    background: #141414;
+    min-height: 100vh;
+    padding: 100px 60px 40px;
+    color: #fff;
+}
+
+.dettaglio-generi button {
+    background: transparent;
+    color: #aaa;
+    border: 2px solid #aaa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.dettaglio-generi .contenitore {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.dettaglio-generi .contenitore .movie-per-dettaglio {
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.dettaglio-generi .contenitore .movie-per-dettaglio img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.dettaglio-generi .contenitore .movie-per-dettaglio p {
+    padding: 8px;
+    background: #222;
+    font-size: 0.9rem;
+}
+
+/* not found */
+
+.not-found {
+    background: #141414;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.not-found h1 {
+    font-size: 8rem;
+    color: #e50914;
+}
+
+.not-found h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.not-found p {
+    color: #aaa;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.not-found div {
+    display: flex;
+    gap: 15px;
+}
+
+.not-found .btn-torna-indietro {
+    padding: 20px 30px;
+    background: transparent;
+    color: #aaa;
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.not-found .btn-homepage {
+    padding: 12px 30px;
+    background: #e50914;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* footer */
+
+footer {
+    background: #141414;
+    padding: 50px 60px;
+    color: #aaa;
+    border-top: 1px solid #333;
+}
+
+footer .contenitore {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+footer .contenitore .header {
+    color: #e50914;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+footer .contenitore .links {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+footer .link-home,
+footer .link-generi-footer,
+footer .link-watchlist,
+footer .link-profili-footer {
+    background: #e50914;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer .copyright {
+    font-size: .85rem;
+    padding-top: 20px;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+/* Tablet (max 1024px) */
+@media (max-width: 1024px) {
+
+    /* navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    /* home pubblica */
+    .home-pubblica .sezione-home h1 {
+        font-size: 2rem;
+    }
+
+    .home-pubblica .sezione-features .div-0,
+    .home-pubblica .sezione-download .div-0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* home privata */
+    .home-privata .featured {
+        height: 60vh;
+        padding: 0 30px;
+    }
+
+    .home-privata .sezione-film,
+    .home-privata .search,
+    .home-privata .risultati-ricerca,
+    .sezione-serie {
+        padding: 30px;
+    }
+
+    /* dettaglio film */
+    .dettaglio-film .contenitore,
+    .dettaglio-film .banner,
+    .dettaglio-episodio .contenitore-info,
+    .dettaglio-episodio .banner {
+        padding: 30px;
+    }
+
+    .dettaglio-film .contenitore .dettaglio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* watchlist */
+    .contenitore-watchlist {
+        padding: 100px 30px 40px;
+    }
+
+    /* generi */
+    .generi-profili,
+    .dettaglio-generi {
+        padding: 100px 30px 40px;
+    }
+}
+
+/* Mobile (max 768px) */
+@media (max-width: 768px) {
+
+    /* navbar */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-link {
+        font-size: 1.5rem;
+    }
+
+    .contenitore-login {
+        gap: 10px;
+    }
+
+    .contenitore-login span {
+        display: none; /* nasconde email su mobile */
+    }
+
+    /* home pubblica */
+    .home-pubblica .sezione-home {
+        padding: 80px 20px;
+    }
+
+    .home-pubblica .sezione-home h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-pubblica .sezione-home .p-1 {
+        font-size: 1.1rem;
+    }
+
+    .home-pubblica .sezione-features .div-0 .div-2,
+    .home-pubblica .sezione-download .div-0 .div-1 {
+        font-size: 5rem;
+    }
+
+    .home-pubblica .sezione-features .div-0 .div-1 h2,
+    .home-pubblica .sezione-download .div-0 .div-2 h2 {
+        font-size: 1.8rem;
+    }
+
+    /* login e register */
+    .login .form,
+    .register .form {
+        padding: 30px 20px;
+        width: 100%;
+        margin: 10px;
+    }
+
+    /* home privata */
+    .home-privata .featured {
+        height: 50vh;
+        padding: 0 20px;
+    }
+
+    .home-privata .featured h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-privata .featured p {
+        font-size: 0.9rem;
+        display: none; /* nasconde descrizione su mobile */
+    }
+
+    .home-privata .featured .play-button,
+    .home-privata .featured .info-button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .home-privata .sezione-film,
+    .home-privata .search,
+    .home-privata .risultati-ricerca,
+    .sezione-serie {
+        padding: 20px 15px;
+    }
+
+    /* dettaglio film */
+    .dettaglio-film .banner,
+    .dettaglio-episodio .banner {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    .dettaglio-film .banner h1,
+    .dettaglio-episodio .banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .dettaglio-film .contenitore,
+    .dettaglio-episodio .contenitore-info {
+        padding: 20px 15px;
+    }
+
+    .dettaglio-film .contenitore .dettaglio img {
+        width: 150px;
+        height: 220px;
+    }
+
+    .dettaglio-film .contenitore .dettaglio .bottoni {
+        flex-direction: column;
+    }
+
+    .dettaglio-film .contenitore .dettaglio .bottoni button {
+        width: 100%;
+    }
+
+    /* watchlist */
+    .contenitore-watchlist {
+        padding: 80px 15px 30px;
+    }
+
+    /* selezione profili */
+    .selezione-profili h1 {
+        font-size: 2rem;
+    }
+
+    .selezione-profili .avatar,
+    .selezione-profili .nuovo-profilo {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem;
+    }
+
+    /* generi */
+    .generi-profili,
+    .dettaglio-generi {
+        padding: 80px 15px 30px;
+    }
+
+    .generi-profili h1 {
+        font-size: 1.5rem;
+    }
+
+    /* not found */
+    .not-found h1 {
+        font-size: 5rem;
+    }
+
+    .not-found h2 {
+        font-size: 1.5rem;
+    }
+
+    .not-found div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* footer */
+    footer {
+        padding: 30px 20px;
+    }
+
+    footer .contenitore .links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Mobile piccolo (max 480px) */
+@media (max-width: 480px) {
+
+    .navbar-link {
+        font-size: 1.2rem;
+    }
+
+    .home-pubblica .sezione-home h1 {
+        font-size: 1.2rem;
+    }
+
+    .home-privata .featured h1 {
+        font-size: 1.4rem;
+    }
+
+    .selezione-profili .contenitore {
+        gap: 15px;
+    }
+
+    .selezione-profili .avatar,
+    .selezione-profili .nuovo-profilo {
+        width: 70px;
+        height: 70px;
+        font-size: 1.5rem;
+    }
+}
