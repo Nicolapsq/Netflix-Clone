@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:3000"; // URL del backend
+// const BASE_URL = "http://localhost:3000"; // URL del backend
+const BASE_URL = 'https://netflix-clone-production-657c.up.railway.app'; // URL del backend per deploy
 
 // Funzione base per le chiamate API
 async function request(endpoint, options = {}) {
