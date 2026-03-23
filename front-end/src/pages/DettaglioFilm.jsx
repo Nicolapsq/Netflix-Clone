@@ -83,11 +83,17 @@ export default function DettaglioFilm() {
       <div
         className="banner"
         style={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
           background: movie.banner
             ? `url(${movie.banner})`
             : "linear-gradient(to bottom, #333, #141414)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "60vh",
+          display: "flex",
+          alignItems: "flex-end",
+          padding: "40px 60px",
+
         }}
       >
         <h1>{movie.title}</h1>

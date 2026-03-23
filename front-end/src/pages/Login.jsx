@@ -40,7 +40,7 @@ export default function Login() {
           <div style={{ marginBottom: "20px" }}>
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Email con la quale ti sei registrato"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

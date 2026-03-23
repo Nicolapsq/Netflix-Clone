@@ -607,16 +607,16 @@
     color: #fff;
 }
 
-.dettaglio-film .banner,
+/* .dettaglio-film .banner,
 .dettaglio-episodio .banner {
     height: 60vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     display: flex;
     align-items: flex-end;
     padding: 40px 60px;
-}
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
 
 .dettaglio-film .banner h1,
 .dettaglio-episodio .banner h1 {

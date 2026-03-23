@@ -42,7 +42,7 @@ export default function Register() {
           <div style={{ marginBottom: "20px" }}>
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Inserisci una e-mail falsa es: e-mail@esempio.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -51,7 +51,7 @@ export default function Register() {
           <div style={{ marginBottom: "20px" }}>
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Inserisci una password di almeno 6 caratteri o numeri"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />

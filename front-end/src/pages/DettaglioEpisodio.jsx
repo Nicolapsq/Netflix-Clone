@@ -37,7 +37,9 @@ export default function DettaglioEpisodio() {
       <>
         <div className="episodio-non-trovato">
           <p>Episodio non trovato</p>
-          <Link className="link" to ="/home">Clicca qui per tornare alla Home</Link>
+          <Link className="link" to="/home">
+            Clicca qui per tornare alla Home
+          </Link>
         </div>
       </>
     );
@@ -49,9 +51,16 @@ export default function DettaglioEpisodio() {
       <div
         className="banner"
         style={{
-          background: episode.thumbnail
-            ? `linear-gradient(to bottom, rgba(0,0,0,0.3), #141414), url(${episode.thumbnail})`
+          background: movie.banner
+            ? `url(${movie.banner})`
             : "linear-gradient(to bottom, #333, #141414)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "60vh",
+          display: "flex",
+          alignItems: "flex-end",
+          padding: "40px 60px",
         }}
       >
         <div>
