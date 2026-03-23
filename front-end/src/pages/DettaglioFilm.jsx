@@ -87,7 +87,7 @@ export default function DettaglioFilm() {
             ? `url(${movie.banner})`
             : "linear-gradient(to bottom, #333, #141414)",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "top",
           backgroundRepeat: "no-repeat",
           height: "60vh",
           display: "flex",
